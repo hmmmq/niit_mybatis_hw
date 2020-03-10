@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+  <!-- 配置sql映射
+  namespace:名称空间
+  1.随便写
+  2.mapper接口开发，不能随便写，按照要求来写
+   -->
+<mapper namespace="abc">
+<!-- 
+定义查询语句
+id:《select》唯一表示
+resultype:结果集
+id:参数值
+ -->
+  <select id="selectbook" resultType="com.niit.mybatis.beans.book">
+    select id,bookname bookName from book where id = #{id}
+  </select>
+</mapper>
